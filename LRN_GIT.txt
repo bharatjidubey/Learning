@@ -1,0 +1,73 @@
+Learning Git & Gtthub
+
+Git ---
+Git is a version control system that is used to track changes to your files.
+It is a free and open-source software that is available for Windows, macOS, and Linux. 
+Remember, GIT is a software and can be installed on your computer.
+
+Github ---
+Github is a web-based hosting service for Git repositories. 
+Github is an online platform that allows you to store and share your code with others. 
+It is a popular platform for developers to collaborate on projects and to share code.
+
+
+
+Version COntrol --- (VCS)
+Version control systems are used to manage the history of your code. 
+They allow you to track changes to your files and to collaborate with others. 
+Consider it as a checkpoint in game.
+
+
+Repositry ---
+A repository is a collection of files and directories that are stored together. 
+It is a way to store and manage your code.
+Also called as Folder.
+
+
+Commit  ---
+commit is a way to save your changes to your repository. 
+It is a way to record your changes and make them permanent.
+Write -> Add -> Commit
+
+init (work)  -- dict --> Repo ---> Commit.
+
+
+gitignore  ---
+Gitignore is a file that tells git which files and folders to ignore. 
+It is a way to prevent git from tracking certain files or folders. 
+
+ex. like '.env' file it store API secrets keys, payemnt gatewaycode etc.
+
+create file named .gitignore the write the files naeme inside. but .gitignores always get tracked but inside data not.
+
+
+alternate to make file folder untrack inside folder make a file name '.gitkeep'
+
+
+
+
+BAsic COmmmand ---
+
+git --version
+git status
+
+git config --global user.email "your-email@example.com"
+git config --global user.name "Your Name"
+
+git config --list
+
+git init                --- create Folder
+
+Remove-Item -Recurse -Force .git     --- it remove git only from dir.
+
+git add .           --- add all files 
+git add filename    --- add specific file
+
+git commit -m "commit message"             ---  -m means massage
+
+git log                --- passbook
+                press E then q to back to terminal
+
+git log --oneline                  --- give quick log 
+
+
