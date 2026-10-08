@@ -76,23 +76,23 @@
 # boolean
 # none
 
-# Example                         Data Type
+# Example                                        Data Type
 
-# x = "Hello World"               str
-# x = 20                          int
-# x = 20.5                        float
-# x = 1j                          complex
-# x = ["apple", "banana", "cherry"] list
-# x = ("apple", "banana", "cherry") tuple
-# x = range(6)                    range
-# x = {"name": "John", "age": 36} dict
-# x = {"apple", "banana", "cherry"} set
-# x = frozenset({"apple", "banana", "cherry"}) frozenset
-# x = True                        bool
-# x = b"Hello"                    bytes
-# x = bytearray(5)                bytearray
-# x = memoryview(bytes(5))        memoryview
-# x = None                        NoneType
+# x = "Hello World"                              str
+# x = 20                                         int
+# x = 20.5                                       float
+# x = 1j                                         complex
+# x = ["apple", "banana", "cherry"]              list
+# x = ("apple", "banana", "cherry")              tuple
+# x = range(6)                                   range
+# x = {"name": "John", "age": 36}                dict
+# x = {"apple", "banana", "cherry"}              set
+# x = frozenset({"apple", "banana", "cherry"})   frozenset
+# x = True                                       bool
+# x = b"Hello"                                   bytes
+# x = bytearray(5)                               bytearray
+# x = memoryview(bytes(5))                       memoryview
+# x = None                                       NoneType
 
 #--------------------------------------------------------------------------------------------------------
 
@@ -211,7 +211,8 @@
 
 
 #List - Anything can be store - mutable.
-list_name = ["A", "B", "C", 21, 15, 11, 15, False]
+
+#list_name = ["A", "B", "C", 21, 15, 11, 15, False]
 
 # print(list_name)
 
@@ -224,26 +225,523 @@ list_name = ["A", "B", "C", 21, 15, 11, 15, False]
 # # print(list_name)
 
 # # insert - list_name(index, value)
-# list_name.insert(0, 15)
+# list_name.insert("B", 15)
+
+# # Extend
+# list_name.extend([60, 70])
+# print(list_name
 
 # # #--Acess index
 # # print(list_name[2:5])
 
 # # list_name.sort()
 # # print(list_name)               
-# # print(list_name.sort()) ----- wrong
+# # print(list_name.sort())         # ----- wrong
 
 # list_name.reverse()
 # print(list_name)
 
+# # count
+# print(list_name.count(15))         # --- count no.of time occurs
 
-# # to remove - pop    list_name.pop(index)
+# # copy
+# new_list = list_name.copy()         # create a copy of list
+# print(new_list)
+
+# # to remove - pop    list_name.pop(index) - it also print pop value / element
 # list_name.pop(1)
 # print(list_name)
 
 
+# # remove
+# list_name.remove(15)
+# print(list_name)
+
+# # clear - remove all data
+# list_name.clear()
+# print(list_name)
+
+
+#--------------------------------------------------------------------------------------------------------
+
+# Tuple - Anything can be stored - immutable.
+# Tuple is ordered and allows duplicate values.
+
+# tuple_name = ("A", "B", "C", 21, 15, 11, 15, False)
+
+# print(tuple_name)
+
+# print(len(tuple_name))
+
+
+#-- Access index
+# print(tuple_name[2])
+
+
+#-- Slicing
+# print(tuple_name[2:5])
+# print(tuple_name[::-1])                  # reverse
+
+
+#-- Update
+# tuple_name[2] = "G"
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+
+#-- append
+# tuple_name.append("P")
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+# tuple_name = tuple_name + ("P",)         # alternative using +
+# print(tuple_name)
+
+
+#-- insert
+# tuple_name.insert(2, "P")
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+# tuple_name = tuple_name[:2] + ("X",) + tuple_name[2:]
+# print(tuple_name)
+
+
+#-- extend
+# tuple_name.extend([60, 70])
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+# tuple_name = tuple_name + (60, 70)       # alternative using +
+# print(tuple_name)
+
+
+#-- Concatenation
+# tuple2 = (10, 20, 30)
+# tuple3 = tuple_name + tuple2
+# print(tuple3)
+
+
+#-- sort
+# tuple_name.sort()
+# print(tuple_name)
+# ----- ERROR because tuple has no sort() method
+
+# numbers = (21, 15, 11, 15)
+# new_tuple = tuple(sorted(numbers))
+# print(new_tuple)
+
+
+#-- reverse
+# tuple_name.reverse()
+# print(tuple_name)
+# ----- ERROR because tuple has no reverse() method
+
+# print(tuple(reversed(tuple_name)))
+
+
+#-- count
+# print(tuple_name.count(15))               # count no. of times value occurs
+
+
+#-- Repeat
+# print(tuple_name * 3)
+
+
+#-- MAX / MIN / SUM
+# max() and min() need comparable elements.
+# sum() is used for numeric values.
+
+# numbers = (21, 15, 11, 15)
+# print(max(numbers))                       # largest value
+# print(min(numbers))                       # smallest value
+# print(sum(numbers))                       # total
+
+
+#-- index
+# print(tuple_name.index(21))               # gives index/position of value
+
+
+#-- copy
+# new_tuple = tuple_name.copy()
+# print(new_tuple)
+# ----- ERROR because tuple has no copy() method
+
+
+#-- pop
+# tuple_name.pop(1)
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+# removed = tuple_name[2]
+# tuple_name = tuple_name[:2] + tuple_name[3:]
+# print("Removed:", removed)
+# print(tuple_name)
+
+
+#-- remove
+# tuple_name.remove(15)
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+# tuple_name = tuple_name[:4] + tuple_name[5:]   # remove index 4
+# print(tuple_name)
+
+
+#-- clear
+# tuple_name.clear()
+# print(tuple_name)
+# ----- ERROR because tuple is immutable
+
+# tuple_name = ()
+# print(tuple_name)
+
+
+#-- in
+# print(15 in tuple_name)                    # True - value is present
+# print("X" in tuple_name)                   # False - value is not present
+
+
+#-- not in
+# print(20 not in tuple_name)                # True - value is not present
+# print(15 not in tuple_name)                # False - value is present
+
+
+#-- LOOPS
+# for x in tuple_name:
+#     print(x)
+
+
+#-- List to Tuple
+# list_name = ["A", "B", "C", 21]
+# tuple_name = tuple(list_name)
+# print(tuple_name)
+
+
+#-- Tuple to List
+# list_name = list(tuple_name)
+# print(list_name)
+
+
+#-- Nested Tuple
+# student = ("Bharat", (21, "BCA"))
+# print(student[1])
+# print(student[1][0])
+
+
+#-- Single Element Tuple
+# a = (10)                                  # int
+# b = (10,)                                 # tuple
+# print(type(a))
+# print(type(b))
+
+#--------------------------------------------------------------------------------------------------------
+
+# Dictionary
+# key-value pair.
+# mutable
+# ordered (preserves insertion order)
+# accessed using keys
+# duplicate keys are not allowed
+
+# dict_name = {"B": 21, "P": 15, "G": 11, 0: "God"}
+
+# print(dict_name)
+
+
+#-- Access value using key
+# print(dict_name["B"])
+# print(dict_name[0])
+
+
+#-- get()
+# print(dict_name.get("B"))
+# print(dict_name.get("X"))              # None if key does not exist
+
+# print(dict_name.get("X", "Not Found")) # custom value if key does not exist
+
+
+#-- items()
+# print(dict_name.items())               # returns key-value pairs
+
+
+#-- keys()
+# print(dict_name.keys())                # returns all keys
+
+
+#-- values()
+# print(dict_name.values())              # returns all values
+
+
+#-- update()
+# dict_name.update({"B": 25})            # update existing key
+# dict_name.update({"D": 50})            # add new key
+# print(dict_name)
+
+
+#-- Add new key-value pair
+# dict_name["D"] = 50
+# print(dict_name)
+
+
+#-- Change value
+# dict_name["B"] = 100
+# print(dict_name)
+
+
+#-- pop()
+# removed = dict_name.pop("P")
+# print(removed)
+# print(dict_name)
+
+
+# #-- popitem()
+# removed = dict_name.popitem()
+# print(removed)
+# print(dict_name)                                # removes the last inserted key-value pair
+
+
+#-- del
+# del dict_name["G"]
+# print(dict_name)
+
+
+#-- clear()
+# dict_name.clear()
+# print(dict_name)
+# removes all key-value pairs
+
+
+#-- copy()
+# new_dict = dict_name.copy()
+# print(new_dict)
+
+
+#-- setdefault()
+# dict_name.setdefault("D", 50)
+# print(dict_name)
+
+# If key exists, value is not changed
+# If key does not exist, new key-value pair is added
+
+
+#-- in
+# print("B" in dict_name)                 # checks key
+# print("X" in dict_name)                 # False
+
+
+#-- not in
+# print("X" not in dict_name)              # True
+# print("B" not in dict_name)              # False
+
+
+#-- Length
+# print(len(dict_name))
+
+
+#-- Loop through keys
+# for x in dict_name:
+#     print(x)
+
+
+#-- Loop through values
+# for x in dict_name.values():
+#     print(x)
+
+
+#-- Loop through key-value pairs
+# for key, value in dict_name.items():
+#     print(key, value)
+
+
+#-- Check key exists and get value
+# if "B" in dict_name:
+#     print(dict_name["B"])
+
+
+# # -- Nested Dictionary
+# student = {
+#     "name": "Bharat",
+#     "marks": {
+#         "Python": 90,
+#         "Java": 85
+#     }
+# }
+# print(student)
+
+# print(student["marks"])
+# print(student["marks"]["Python"])
+
+
+#-- Dictionary from keys
+# keys = ("A", "B", "C")
+# new_dict = dict.fromkeys(keys, 0)
+# print(new_dict)
+
+
+#-- Dictionary conversion
+# list_name = [("A", 10), ("B", 20), ("C", 30)]
+# new_dict = dict(list_name)
+# print(new_dict)
+
+
+# #-- Duplicate keys
+# test = {"A": 10, "B": 20, "A": 50}
+# print(test)                                       # Last value replaces the previous value
 
 
 
+#--------------------------------------------------------------------------------------------------------
 
-          
+
+# Sets
+# unordered -- mutable   -- elements are unique   -- No indexing -- No slicing   #-- No duplicate elements
+
+# e = set()                         # empty set not this, e = {} it give dict
+
+# set_name = {11, 15, 15, "B", "G", "P"}
+
+# print(set_name)
+# print(set_name, type(set_name))
+
+
+#-- Add
+# set_name.add(21)
+# print(set_name)
+# adds one element
+
+
+#-- Update
+# set_name.update([21, 25, 30])
+# print(set_name)
+# adds multiple elements
+
+
+#-- Remove
+# set_name.remove(15)
+# print(set_name)
+# removes element
+# ERROR if element does not exist
+
+
+#-- Discard
+# set_name.discard(15)
+# print(set_name)                       # removes element & NO ERROR if element does not exist
+
+
+#-- Pop
+# removed = set_name.pop()
+# print(removed)
+# print(set_name)
+# removes a random/arbitrary element
+# because set is unordered
+
+
+#-- Clear
+# set_name.clear()
+# print(set_name)
+# removes all elements
+
+
+#-- Copy
+# new_set = set_name.copy()
+# print(new_set)
+
+
+#-- in
+# print(15 in set_name)            # True
+# print(50 in set_name)            # False
+
+
+#-- not in
+# print(50 not in set_name)        # True
+# print(15 not in set_name)        # False
+
+
+#-- Length
+# print(len(set_name))
+
+
+#==================================================
+# SET OPERATIONS
+
+# set1 = {1, 2, 3}
+# set2 = {3, 4, 5}
+
+
+# #-- Union   - Combines elements from both sets
+# print(set1.union(set2))
+# print(set1 | set2)
+
+
+# #-- Intersection    - Gives common elements
+# print(set1.intersection(set2))
+# print(set1 & set2)
+
+
+# #-- Difference  - Elements present in set1 but not in set2
+# print(set1.difference(set2))
+# print(set1 - set2)
+
+
+# #-- Symmetric Difference    - Elements that are NOT common
+# print(set1.symmetric_difference(set2))
+# print(set1 ^ set2)
+
+
+# #-- Subset  - Checks whether one set is completely inside another
+# print(set1.issubset(set2))                  #- give true / false
+
+
+# #-- Superset    - Checks whether one set contains another set
+# print(set2.issuperset(set1))              #- give true / false
+
+
+# #-- Disjoint    - Checks whether two sets have NO common elements
+# print(set1.isdisjoint(set2))
+
+
+#==================================================
+# MODIFYING SETS
+
+
+
+# #-- intersection_update()
+# # Keeps only common elements but changes orignal set
+# set1.intersection_update(set2)
+# print(set1)
+
+
+
+# #-- difference_update() - Removes common elements from set1 & changes the original set1
+# set1.difference_update(set2)
+# print(set1)
+
+
+# #-- symmetric_difference_update()       -  Keeps elements that are not common
+# set1.symmetric_difference_update(set2)
+# print(set1)
+
+
+
+#==================================================
+# SET CONVERSION
+
+
+# #-- List to Set
+# list_name = [10, 20, 20, 30, 30]
+# set_name = set(list_name)
+# print(set_name, type(set_name))
+
+
+
+# #-- Tuple to Set
+# tuple_name = (10, 20, 20, 30)
+# set_name = set(tuple_name)
+# print(set_name, type(set_name))
+
+
+# #-- Set to List
+# list_name = list(set_name)
+# print(list_name, type(list_name))
+
