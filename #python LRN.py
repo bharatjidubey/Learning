@@ -39,7 +39,7 @@
 
 #--------------------------------------------------------------------------------------------------------
 
-# print()
+# print()    -  sends output to the screen.
 # to print simple string - print(" xyz ")
 # print(x, y, z)
 # print(x + y + z)
@@ -53,13 +53,22 @@
 
 #--------------------------------------------------------------------------------------------------------
 
-# vsriable - A container - it stores values like intereger string etc.
+# input() reads what the user types and always returns a string, even if the user types digits.
+# name = input('Enter your name: ')
+
+#vari_name = input("enter xyx : ")
+#print(f"xyz,{vari_name}") - via f we can use variable at mid of string  or      print("xyz", vari_name)  
+
+#--------------------------------------------------------------------------------------------------------
+
+# variable - A container - it stores values like intereger string etc.
 # variable name should be not any keyword, _aa , aa_aa , valids incliding numeric.
 # variable name start with slphabate underscore but not numeric in mid underscore valid, and numic also valid in mid.
 
 #x = y = z = "Orange"  //  x, y, z = "Orange", "Banana", "Cherry"
 
-# CAsting - changing data tyoe. 
+
+# CAsting - changing data tyoe. -----------------------------
 # x = str(3)
 # y = int(3)
 # z = float(3)
@@ -100,19 +109,21 @@
 
 # operands are variable and operators are = + - * etc
 
-# 1. Assignment operator
-# 2. comperision operator
-# 3. arithmatic operator
-# 4. logical operators
+# 1. Assignment operator    :   =  +=  -=  *=  /=  %=
+# 2. comperision operator   :   >  <  !=  >=  <=    ==      Relational
+# 3. arithmatic operator    :   +  -  *  /  //  %  **
+# 4. logical operators      :   and or not
+# 5. Membership Operator    :   in, not in, is, is not
+
+  
 
 
-
-
-# a =+ 2    means a =  a + 3 = ...
+# a += 2    means a =  a + 2 = ...
 
 #--------------------------------------------------------------------------------------------------------
 
 #Strings - these are immutable orignal string not change, a new changed string should print.
+#           - A string is a sequence of characters inside single, double or triple quotes.
 
 # print(" xyz ")
 # print(''' x
@@ -120,14 +131,14 @@
 #         z ''')
 
 
-# looping
+#   looping     ------
 # for x in "banana":
 #   print(x)
 
 
 # Check fxn - To check if a certain phrase or character is present in a string, we can use the keyword in.
 # txt = "The best things in life are free!"
-# print("free" in txt)
+# print("free" in txt)                            # True   & using membership oprator 'in'
 
 # txt = "The best things in life are free!"
 # print("expensive" not in txt)
@@ -137,6 +148,9 @@
 # txt = "The best things in life are free!"
 # if "free" in txt:
 #   print("Yes, 'free' is present.")
+
+
+#   Indexing    -----
 
 # indexing in string    h e l l o     0 1 2 3 4 then -1 -2 -3 -4 -5     0, -5 both show h  &  4, -1 showes o
 #last index in range not included.
@@ -155,14 +169,20 @@
 #acegi
 
 
+#   Methods -----
+
+# b = "abcdefghijklmnopqrst"
+
 #print(len("hello"))       or    print(len(b))      - count space
 
 #print(b.lower())       or    print("xyz".upper()) 
 #print(b.upper())       or    print("xyz".upper()) 
+#print(b.capitalization())
 
 #print(b.replace())
-#print(b.find("xyz"))
-#print(b.replace("old", "new", 1))    or        #print(b.replace("old", "new", 1).replace("xx", "yy")) -  1 means only 1 time replace.
+#print(b.replace("old", "new", 1))    or       #print(b.replace("old", "new", 1).replace("xx", "yy")) -  1 means only 1 time replace.
+
+#print(b.find("xyz"))   - give index where it start else -1 not found
 
 #print(b.strip())   or    print(vari_name.strip())    -  it remove space from both end not from mid.
 #print(b.lstrip())    or    print(vari_name.lstrip())     -    it remove space from left end
@@ -187,7 +207,8 @@
 # b.islower()     # all lowercase?
 # b.isupper()     # all uppercase?
 
-# Escape Characters
+
+#   Escape Characters     ------
 # print("Name: xyz\nAge: 25\nCity: Delhi")   # \n = New line
 # print("Name:\txyz\tAge:\t25")               # \t = Tab
 # print("Path: C:\\Users\\xyz")               # \\ = Backslash
@@ -198,19 +219,14 @@
 # print("Hello\fWorld")                       # \f = Form feed
 # print("Hello\vWorld")                       # \v = Vertical tab
 # print("Hello\a")                            # \a = Alert/Bell
-# print("Hello\0World")                        # \0 = Null character
-
-
-#   Taking Inputs
-#vari_name = input("enter xyx : ")
-#print(f"xyz,{vari_name}") - via f we can use variable at mid of string  or      print("xyz", vari_name)  
+# print("Hello\0World")                       # \0 = Null character
 
 
 
 #-----------------------------------------------------------------------------------------------------------------
 
 
-#List - Anything can be store - mutable.
+#List - Anything can be store - mutable -   duplicate   -   ordered.
 
 #list_name = ["A", "B", "C", 21, 15, 11, 15, False]
 
@@ -218,25 +234,25 @@
 
 
 # #--Update
-# # list_name[2] = "G"
-# # print(list_name)
+# list_name[2] = "G"
+# print(list_name)
 
-# # list_name.append("P")
-# # print(list_name)
+# list_name.append("P")             - insert element at end
+# print(list_name)
 
-# # insert - list_name(index, value)
-# list_name.insert("B", 15)
+# # insert - list_name(index, value)            - insert by index at any postion
+# list_name.insert("1", 15)
 
-# # Extend
+# # Extend                             - insert as many at end
 # list_name.extend([60, 70])
-# print(list_name
+# print(list_name)
 
-# # #--Acess index
-# # print(list_name[2:5])
+# #--Acess index
+# print(list_name[2:5])
 
-# # list_name.sort()
-# # print(list_name)               
-# # print(list_name.sort())         # ----- wrong
+# list_name.sort()
+# print(list_name)               
+# print(list_name.sort())         # ----- here we recive error because our list contain both str & int
 
 # list_name.reverse()
 # print(list_name)
@@ -283,34 +299,34 @@
 # print(tuple_name[::-1])                  # reverse
 
 
-#-- Update
-# tuple_name[2] = "G"
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
+    #-- Update
+    # tuple_name[2] = "G"
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
 
 
-#-- append
-# tuple_name.append("P")
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
+    #-- append
+    # tuple_name.append("P")
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
 
 # tuple_name = tuple_name + ("P",)         # alternative using +
 # print(tuple_name)
 
 
-#-- insert
-# tuple_name.insert(2, "P")
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
+    #-- insert
+    # tuple_name.insert(2, "P")
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
 
 # tuple_name = tuple_name[:2] + ("X",) + tuple_name[2:]
 # print(tuple_name)
 
 
-#-- extend
-# tuple_name.extend([60, 70])
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
+    #-- extend
+    # tuple_name.extend([60, 70])
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
 
 # tuple_name = tuple_name + (60, 70)       # alternative using +
 # print(tuple_name)
@@ -322,20 +338,47 @@
 # print(tuple3)
 
 
-#-- sort
-# tuple_name.sort()
-# print(tuple_name)
-# ----- ERROR because tuple has no sort() method
+    #-- sort
+    # tuple_name.sort()
+    # print(tuple_name)
+    # ----- ERROR because tuple has no sort() method
 
 # numbers = (21, 15, 11, 15)
 # new_tuple = tuple(sorted(numbers))
 # print(new_tuple)
 
 
-#-- reverse
-# tuple_name.reverse()
+    #-- copy
+    # new_tuple = tuple_name.copy()
+    # print(new_tuple)
+    # ----- ERROR because tuple has no copy() method
+
+
+    #-- pop
+    # tuple_name.pop(1)
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
+
+# removed = tuple_name[2]
+# tuple_name = tuple_name[:2] + tuple_name[3:]
+# print("Removed:", removed)
 # print(tuple_name)
-# ----- ERROR because tuple has no reverse() method
+
+
+
+    #-- remove
+    # tuple_name.remove(15)
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
+
+# tuple_name = tuple_name[:4] + tuple_name[5:]   # remove index 4
+# print(tuple_name)
+
+
+    #-- reverse
+    # tuple_name.reverse()
+    # print(tuple_name)
+    # ----- ERROR because tuple has no reverse() method
 
 # print(tuple(reversed(tuple_name)))
 
@@ -362,36 +405,11 @@
 # print(tuple_name.index(21))               # gives index/position of value
 
 
-#-- copy
-# new_tuple = tuple_name.copy()
-# print(new_tuple)
-# ----- ERROR because tuple has no copy() method
 
-
-#-- pop
-# tuple_name.pop(1)
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
-
-# removed = tuple_name[2]
-# tuple_name = tuple_name[:2] + tuple_name[3:]
-# print("Removed:", removed)
-# print(tuple_name)
-
-
-#-- remove
-# tuple_name.remove(15)
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
-
-# tuple_name = tuple_name[:4] + tuple_name[5:]   # remove index 4
-# print(tuple_name)
-
-
-#-- clear
-# tuple_name.clear()
-# print(tuple_name)
-# ----- ERROR because tuple is immutable
+    #-- clear
+    # tuple_name.clear()
+    # print(tuple_name)
+    # ----- ERROR because tuple is immutable
 
 # tuple_name = ()
 # print(tuple_name)
@@ -441,10 +459,10 @@
 # key-value pair.
 # mutable
 # ordered (preserves insertion order)
-# accessed using keys
+# accessed using keys not using index
 # duplicate keys are not allowed
 
-# dict_name = {"B": 21, "P": 15, "G": 11, 0: "God"}
+# dict_name = {"B": 21, "P": 15, "G": 11, 0: "God"} -------
 
 # print(dict_name)
 
@@ -458,28 +476,26 @@
 # print(dict_name.get("B"))
 # print(dict_name.get("X"))              # None if key does not exist
 
-# print(dict_name.get("X", "Not Found")) # custom value if key does not exist
+# print(dict_name.get("X", "Not Found"))        # custom value if key does not exist
 
 
 #-- items()
 # print(dict_name.items())               # returns key-value pairs
 
-
 #-- keys()
 # print(dict_name.keys())                # returns all keys
-
 
 #-- values()
 # print(dict_name.values())              # returns all values
 
 
-#-- update()
+# #-- update()
 # dict_name.update({"B": 25})            # update existing key
 # dict_name.update({"D": 50})            # add new key
 # print(dict_name)
 
 
-#-- Add new key-value pair
+# #-- Add new key-value pair
 # dict_name["D"] = 50
 # print(dict_name)
 
@@ -489,7 +505,7 @@
 # print(dict_name)
 
 
-#-- pop()
+#-- pop()                                   # remove & print last inserted value
 # removed = dict_name.pop("P")
 # print(removed)
 # print(dict_name)
@@ -501,12 +517,12 @@
 # print(dict_name)                                # removes the last inserted key-value pair
 
 
-#-- del
-# del dict_name["G"]
+#-- del                     - remove a pair by key
+# del dict_name["G"]                
 # print(dict_name)
 
 
-#-- clear()
+#-- clear()                                 - remove all pair
 # dict_name.clear()
 # print(dict_name)
 # removes all key-value pairs
@@ -684,20 +700,22 @@
 # print(set1 - set2)
 
 
-# #-- Symmetric Difference    - Elements that are NOT common
+# #-- Symmetric Difference    - Elements that are NOT common on both
 # print(set1.symmetric_difference(set2))
 # print(set1 ^ set2)
 
 
 # #-- Subset  - Checks whether one set is completely inside another
+# # -- is set1 is present in set2
 # print(set1.issubset(set2))                  #- give true / false
 
 
 # #-- Superset    - Checks whether one set contains another set
+# #-- in set2 set1 is present
 # print(set2.issuperset(set1))              #- give true / false
 
 
-# #-- Disjoint    - Checks whether two sets have NO common elements
+# #-- Disjoint    - Checks whether two sets have NO common elements then TRUE
 # print(set1.isdisjoint(set2))
 
 
@@ -744,4 +762,142 @@
 # #-- Set to List
 # list_name = list(set_name)
 # print(list_name, type(list_name))
+
+
+
+
+#------------------------------------------------------------------------------------------------------------
+
+# Conditional Expressions
+
+# 1. IF ELSE & ELIF
+
+# if(cond...):
+#     print("xyz")
+# elif(cond...):
+#     print("xxx")
+# elif(cond...):
+#     print("zzz")
+# else:
+#     print("zyx")
+
+
+
+#------------------------------------------------------------------------------------------------------------
+
+# Loops
+# For & while 
+
+#   --  While loops ---
+
+# i = x             intialize
+# while(cond...):
+#     print("xyz")
+#     i += x            increment in i then check cond if satisfy then terminate.
+
+# #ex
+# i=1
+# while(i<21):
+#     print("11OCT")
+#     i+=1
+
+
+# # --  print list using while Look --  
+# ls = [11,15,15,"g","B","p", False]
+# i = 1
+# while(i<len(ls)):                 # len(ls) - len of list
+#     print(ls[i])                # ls[i] - i index - index printing
+#     i+=1
+
+
+#   --  For loop    ----
+
+# for i in range(int, end, inc):
+#     print(i)
+
+
+# #ex. 4 table
+# for i in range(0, 40, 4):
+#     print(i)
+
+
+# #   --  print list using for loop   --
+# ls = [11,15,15,"g","B","p", False]
+# for i in ls:
+#     print(i, type(ls))
+
+
+# #   --  print tuple using for loop   --
+# tp = (11,15,15,"g","B","p", False)
+# for i in tp:
+#     print(i, type(tp))
+
+
+# #   --  print string using for loop   --
+# g = "tiwar ji"
+# for i in g:
+#     print(i)
+# else:
+#     print("might be")
+
+
+
+#==========================================================
+
+#   --  Break   --
+#     - instant exist the loop. it kill the loop.
+# for i in range(11,21):
+#     if(i==15):
+#         break
+#     print(i)
+
+
+#   --  continue    --
+#     - if condn. meet, skip the curreent iteration and continue iteration.
+# for i in range(11,21):
+#     if(i == 15):
+#         continue
+#     print(i)
+
+
+#   --  pass    --
+#     - it a null statement means it excute to do nothing.
+
+# for i in range(11,21):
+#     pass
+
+# i =11
+# while(i<21):
+#     print(i)
+#     i+=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
