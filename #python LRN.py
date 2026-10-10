@@ -768,9 +768,10 @@
 
 #------------------------------------------------------------------------------------------------------------
 
-# Conditional Expressions
+# Conditional Expressions       - code that lets a program take a decision. It runs a block only when a condition is True.
 
 # 1. IF ELSE & ELIF
+                        # - here we can use   'and'     'or'    'not'
 
 # if(cond...):
 #     print("xyz")
@@ -781,36 +782,67 @@
 # else:
 #     print("zyx")
 
+# *** always remeber if a condn stisfy at if and elif both places, we only consider if then code terminate.
+
+# var_name = "xyz"
+# if var_name == "xyz" or var_name == "zyx":
+#     print("asdfghj")
+
+
+# var_name = 00
+# if var_name >= 00 and var_name <= 11:
+#     print("asdfghj")
+
+
+
+# 2. CASE - SWITCH CASE
+
+# vari_name = 2  (case no.)     or can use as user input for case
+
+# match vari_name:
+#     case 1:
+#         print("x")
+#     case 2:
+#         print("y")
+#     case 3:
+#         print("z")
+#     case _:
+#         print("...")
+
 
 
 #------------------------------------------------------------------------------------------------------------
 
-# Loops
+# Loops     - a structure that repeats a block of code. One repetition is called an iteration. 
 # For & while 
 
-#   --  While loops ---
+#   --  While loops --- repeats as long as its condition is True. It is used when you do not know in advance how many times to repeat.
 
 # i = x             intialize
 # while(cond...):
 #     print("xyz")
-#     i += x            increment in i then check cond if satisfy then terminate.
+#     i += x            update / increment in i then check cond, if satisfy then terminate.
 
 # #ex
-# i=1
-# while(i<21):
-#     print("11OCT")
-#     i+=1
+
+# i = 1                  # initialise
+# while i < 6:           # condition
+#     print(i)
+#     i += 1             # update
+
 
 
 # # --  print list using while Look --  
 # ls = [11,15,15,"g","B","p", False]
-# i = 1
+# i = 0
 # while(i<len(ls)):                 # len(ls) - len of list
 #     print(ls[i])                # ls[i] - i index - index printing
 #     i+=1
 
 
-#   --  For loop    ----
+
+
+#   --  For loop    ---- it itrate till cond is stisfiyed.
 
 # for i in range(int, end, inc):
 #     print(i)
@@ -872,32 +904,244 @@
 #     i+=1
 
 
+#------------------------------------------------------------------------------------------------------------
+
+# Recursion and function
+
+# Function
+    # - group of statement perform specific task. reuseable, no repeated code.
+    # - # 1. Built in fxn - already provided functions like print(), len(), range() etc.
+        # 2. User defined fxn - user made like greet() below.
+
+
+# def fxn_name( parameters ):
+#     {
+#         logic...
+#         print("xyz")
+#     }
+
+#     fxn_name( arguments )      - to call fxn
+
+
+# Parameter - the placeholder variable written in the function definition. like n, endingg.
+# Argument - the actual value you pass / give when calling the function. like n = name & endingg = thank you.
+# below example
+
+
+# def add(a, b):
+#     return a + b
+
+# result = add(3, 4)    # result stores 7
+
+
+# # ex -----
+
+# def greet():                         
+#         print(n + " " + "have a good day !")
+
+# n = str(input("enter you name : "))     
+# greet()            
+
+#==================================
+
+# # ex ----- here we give parameter and arguments  //    1 parameter with many arugments
+
+# def greet(n, endingg):                            # - n & endingg are parameters
+#         print(n + " " + "have a good day !")
+#         print(endingg)
+
+# #n = str(input("enter you name : "))      # # to use n, remove n from fxn parameter and arguments
+# greet("god", "thanks!!")                          # - here n = god & endingg = thank are arguments value given to parameters.
+# greet("Shyam", "Goodbye!")
+
+
+#==================================
+
+# # here when we print a we need return value that a printed
+
+# def greet(n, endingg): 
+#         print(n + " " + "have a good day !")
+#         print(endingg)
+
+#         # return"done"
+#         return 7
+
+# a= greet("god", "thanks!!")
+# print(a)
+
+
+#==================================
+
+# # Here the ending is by default print parameter value
+
+# def greet(n, endingg = "jai ho !!"): 
+#         print(n)
+#         print(endingg)
+
+# greet("god")            # - here we didn't give ending what to print but by default value it print.
+
+
+
+
+#==================================
+
+
+# --    Recursion ---   when a function calls itself to solve a smaller version of the same problem.
+#     - Base case: the condition that stops the recursion. Without it the function calls itself endlessly and Python raises a RecursionError.
+#     - Recursive case: the step where the function calls itself with a smaller input.
+
+
+# Ex - factorial
+
+# factorial(5) = 5 × 4 X 3 X 2 X 1   -      5 * fact(4)
+# factorial(4) = 4 × 3 X 2 X 1       -      5 * 4 * fact(3)
+# factorial(3) = 3 X 2 X 1           -      5 * 4 * 3 * fact(2)
+# factorial(2) = 2 X 1               -      5 * 4 * 3 * 2 * fact(1)
+# factorial(1) = 1                   -      5 * 4 * 3 * 2 * 1 * fact(0)
+
+
+# factorial(n) = n   *   n-1    *   n-2    *       n-3 .....
+
+# factorial(n) = n * factorial(n-1)
+
+# def fact(n):
+#     if(n==1 or n==0):               # - must Base condn.
+#         return 1
+#     return n * fact(n-1)
+    
+
+# n = int(input("give n : "))
+# print(fact(n))
 
 
 
 
 
+#------------------------------------------------------------------------------------------------------------
+
+# File I/O - It means using Python to store data in files and retrieve that data later.
+
+
+# operations :    r - read    w = write   r+ - read & Write   a - append    x - create a new file.
+
+# open() - open a file.
+
+# f = open("file_address","opration")
+# content = f.read()
+
+# f.write("xyz")
+#       #or
+# xx = "Welcome to Python."
+# f.write(xx)
+
+# print(content)
+# f.close()                      # - close file manually
 
 
 
+# # 'with open()' automatically closes files
+
+# with open("file.txt", "r") as f:              # as f - means store file contnet in f variable.
+#     print(f.read())
+#       #or
+#     print(f.readline())                      # read a single line.
 
 
 
+# with open("file.txt", "r") as f:
+#     print("Stored name:", f.read())
+
+
+# with open("file.txt", "r") as f:
+#     lines = f.readlines()                                     # give list as result.
+# print(lines)
+
+
+# using while loop to read files line
+# line = f.readline()
+# while(line != ""):
+# print(line)
+# line = f.readline()
+
+# f.close()
+
+
+# with open("file.txt", "w") as f:
+#     f.write("Learning File I/O")
+
+
+# # using append
+# with open("file.txt", "a") as f:
+#     f.write("\nLearning File I/O.")
+
+
+# name = input("Enter your name: ")
+# with open("file.txt", "w") as f:
+#     f.write(name)
 
 
 
+# # write multiple line as list
+# lines = ["Bharat\n", "Gauri\n", "Soni\n"]
+# with open("file.txt", "w") as f:
+#     f.writelines(lines)
 
 
 
+# # creating a new File
+# with open("newfile.txt", "x") as f:
+#     f.write("My first file!")
 
 
 
+# # handle error while opening file                  - Opening a missing file raises FileNotFoundError.
+# try:
+#     with open("missing.txt", "r") as f:
+#         print(f.read())
+
+# except FileNotFoundError:
+#     print("The file does not exist!")
 
 
 
+# # Rename a file
+# from pathlib import Path
+
+# old_file = Path("file.txt")
+# old_file.rename("new.txt")
 
 
+# # Delete a file
+# from pathlib import Path                          # pathlib - library work with paths
+# file = Path("new.txt")
+
+# if file.exists() and file.is_file():
+#     file.unlink()
+#     print("File deleted!")
 
 
+#==================================
+
+# # Work with CSV file 
+
+# # Read ---
+
+# import csv
+
+# with open("file.csv", "r", newline="", encoding="utf-8") as f:
+#     reader = csv.reader(f)
+
+#     for row in reader:
+#         print(row)
 
 
+# # Write ---
+
+# import csv
+
+# with open("file.csv", "w", newline="", encoding="utf-8") as f:
+#     writer = csv.writer(f)
+
+#     writer.writerow(["Name", "Marks"])
+#     writer.writerow(["Bharat", 90])
+#     writer.writerow(["tiwari ji", 90])
