@@ -109,16 +109,29 @@
 
 # operands are variable and operators are = + - * etc
 
-# 1. Assignment operator    :   =  +=  -=  *=  /=  %=
-# 2. comperision operator   :   >  <  !=  >=  <=    ==      Relational
-# 3. arithmatic operator    :   +  -  *  /  //  %  **
-# 4. logical operators      :   and or not
-# 5. Membership Operator    :   in, not in, is, is not
+# 1. Assignment operator                   :   =  +=  -=  *=  /=  %=
+# 2. Relational (comperision) operator     :   >  <  !=  >=  <=    ==      bool
+# 3. arithmatic operator                   :   +  -  *  /  //  %  **       number integer
+# 4. logical operators                     :   and or not                   bool
+# 5. Membership / Identity Operator        :   in, not in  /  is, is not       bool  T/F
 
   
+# print(7 / 2, 7 // 2, 7 % 2, 7 ** 2)   # 3.5 3 1 49
+# print(-7 // 2)                        # -4   (floor division rounds down, not toward zero)
+# print(7 % -3)                         # -2   (the result takes the sign of the divisor)
+# print(10 / 2)                         # 5.0  (a float even when the answer is whole)
+
+# a += 2    means a =  a + 2
 
 
-# a += 2    means a =  a + 2 = ...
+#    /   True division, always a float   a / b
+
+#    //  Floor division: rounds down a // b  
+
+#    %   Modulus (remainder) a % b
+
+#    **  Exponent (power)    a ** b
+
 
 #--------------------------------------------------------------------------------------------------------
 
