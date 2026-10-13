@@ -82,20 +82,30 @@
 
 #------------------------------------------------------------------------
 
-# Swap two variables
-a, b = 10, 20
-temp = a               # with a temporary variable
-a = b
-b = temp
-print(a, b)            # 20 10
+# # Swap two variables
+# a, b = 10, 20
+# temp = a               # with a temporary variable
+# a = b
+# b = temp
+# print(a, b)            # 20 10
 
-a, b = 10, 20
-a, b = b, a            # without a temporary variable
-print(a, b)            # 20 10
-
-
+# a, b = 10, 20
+# a, b = b, a            # without a temporary variable
+# print(a, b)            # 20 10
 
 
+#------------------------------------------------------------------------
 
+# Leap Year
+
+# if x % 400 == 0   mean confirm leap year.
+# if x % 4 == 0 and x % 100 != 0  means confirm leap year.
+
+# x = int(input("Enter year"))
+
+# if x % 400 == 0 or (x % 4 == 0 and x % 100 != 0):
+#     print("Leap Year")
+# else:
+#     print("Not a leap year")
 
 
