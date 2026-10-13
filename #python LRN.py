@@ -807,6 +807,10 @@
 #     print("asdfghj")
 
 
+# marks = 98
+# result = "Pass" if marks >= 40 else "Fail"                    # one line if else
+# print(result)
+
 
 # 2. CASE - SWITCH CASE
 
@@ -1095,7 +1099,7 @@
 
 
 # # write multiple line as list
-# lines = ["Bharat\n", "Gauri\n", "Soni\n"]
+# lines = ["Bharat\n", "tiwari ji\n", "Soni\n"]
 # with open("file.txt", "w") as f:
 #     f.writelines(lines)
 
@@ -1158,3 +1162,71 @@
 #     writer.writerow(["Name", "Marks"])
 #     writer.writerow(["Bharat", 90])
 #     writer.writerow(["tiwari ji", 90])
+
+
+#------------------------------------------------------------------------------------------------------------
+
+
+# Error Handling
+# A try/except block lets a program attempt a risky operation and handle any error that occurs, instead of crashing.
+
+# try - put risky block of code.
+# except - put exceptions or error you know that are possible.
+# else - if both try & except pass then else block work.
+# finally - its the final block always run, it confirm that code excuted whatever the result.
+
+# try:
+#     a = int(input("Numerator: "))
+#     b = int(input("Denominator: "))
+#     result = a / b
+# except ValueError:
+#     print("Please enter whole numbers.")
+# except ZeroDivisionError:
+#     print("Denominator cannot be zero.")
+# else:
+#     print("Result:", result)
+# finally:
+#     print("Done.")
+
+
+
+# while True:
+#     try:
+#         age = int(input("Enter age: "))
+#     except ValueError:
+#         print("Please enter a whole number.")
+#         continue
+#                                # ask again  
+#     if 0 <= age <= 120:
+#         break                                 # if condn. True
+#     print("Age must be between 0 and 120.")
+
+# print("Age accepted:", age)
+
+
+
+# here try -> T -> If condn -> T ->  -> Break ->Print age accepted
+#      try -> T -> If condn -> F -> Print age must be in range -> Again ask loop wont exit till age satisfy.
+#     try -> F -> Except -> T ->  -> Continue ->Print age must be in range -> Again ask loop wont exit till age satisfy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
