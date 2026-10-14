@@ -819,12 +819,16 @@
 # match vari_name:
 #     case 1:
 #         print("x")
+        #   break
 #     case 2:
 #         print("y")
+        #   break
 #     case 3:
 #         print("z")
+        #   break
 #     case _:
 #         print("...")
+        #   break
 
 
 
@@ -864,6 +868,10 @@
 # for i in range(int, end, inc):
 #     print(i)
 
+
+# for variable in sequence:
+#     # Code to execute in each iteration
+#     print(variable)
 
 # #ex. 4 table
 # for i in range(0, 40, 4):
@@ -920,6 +928,26 @@
 #     print(i)
 #     i+=1
 
+
+# count = 0
+# total = 0
+# i = 1
+# while i <= 5:
+#     count += 1
+#     total += i
+#     i += 1
+# print(count, total)     # 5 15
+
+
+
+# word = "banana"
+# i = 0
+# count = 0
+# while i < len(word):
+#     if word[i] == "a":
+#         count += 1
+#     i += 1
+# print(count) 
 
 #------------------------------------------------------------------------------------------------------------
 
@@ -1006,7 +1034,7 @@
 # --    Recursion ---   when a function calls itself to solve a smaller version of the same problem.
 #     - Base case: the condition that stops the recursion. Without it the function calls itself endlessly and Python raises a RecursionError.
 #     - Recursive case: the step where the function calls itself with a smaller input.
-
+#   * here we usually use 'return' not print in recursive fucntion/
 
 # Ex - factorial
 
@@ -1210,6 +1238,62 @@
 #     try -> F -> Except -> T ->  -> Continue ->Print age must be in range -> Again ask loop wont exit till age satisfy.
 
 
+#------------------------------------------------------------------------
+
+# max and min
+
+# temps = [22, 25, 21, 28, 24, 23, 26]
+# lowest = temps[0]
+# highest = temps[0]
+# for t in temps:
+#     if t < lowest:
+#         lowest = t
+#     if t > highest:
+#         highest = t
+# print("Min:", lowest, "Max:", highest)      # Min: 21 Max: 28
+
+#------------------------------------------------------------------------
+
+#flags
+
+# data = [12, 55, 30, 88, 45, 92, 10, 60]
+# target = 45
+# found = False
+# for i in range(len(data)):
+#     if data[i] == target:
+#         found = True
+#         position = i
+#         break
+# if found:
+#     print("Found at index", position)       # Found at index 4
+# else:
+#     print("Not found")
+
+
+#------------------------------------------------------------------------
+
+# Take number of rows and columns
+# r = int(input("Enter number of rows: "))
+# c = int(input("Enter number of columns: "))
+
+# matrix = []
+
+# for i in range(r):
+#     row = []  
+
+#     for j in range(c):
+#         num = int(input(f"Enter element [{i}][{j}]: "))
+#         row.append(num)  # Add element to the row
+
+#     matrix.append(row)  # Add completed row to matrix
+
+# # Display the matrix
+# print("\nYour Matrix:")
+
+# for i in range(r):
+#     for j in range(c):
+#         print(matrix[i][j], end="\t")
+#     print()
 
 
 
@@ -1217,16 +1301,21 @@
 
 
 
+# Reversing a No.
+# like to seprate every digit of a no.
+
+# 1234  = 1 2 3 4 like this then 4 3 2 1 
+
+# % - give remainder  1234 % 10 = 4 as remainder.
+# // - give value but without decimale   like 1234 // 10 = 123.4  = 123as final.
 
 
+num = int(input("Enter the no."))
+rev = 0
 
+while num > 0:
+    x = num % 10
+    rev = rev * 10 + x
+    num = num // 10
 
-
-
-
-
-
-
-
-
-
+print(rev)
