@@ -356,34 +356,83 @@
 # print(fact(x))
 
 
+#------------------------------------------------------------------------
+
+# Prime no.
+
+# x = int(input("Enter the no."))
+
+# if x <= 1:
+#     print("Not Prime")
+# else:
+#     for i in range(2, x):                   # here we check 2 to n range bcs  btw that range is only possiblity to get whole no. and n + values give decimal.
+#         if x % i == 0:
+#             print("Not Prime")
+#             break
+#     else:
+#         print("Prime")
 
 
-x = int(input("Enter the no."))
+#------------------------------------------------------------------------
+
+# GCD and LCM
+# GCD(a,b) = GCD(b, a%b)
+
+# ex. 8 & 3 = (8%3) = (3%2) = (2%1) = (0) = GCD(1)
+
+# LCM = (a * b) / GCD
+
+
+# x = int(input("Enter the first number: "))
+# y = int(input("Enter the second number: "))
+
+# # Handle the special case
+# if x == 0 and y == 0:
+#     print("GCD and LCM are undefined for (0, 0)")
+# else:
+#     # Preserve original values
+#     a, b = abs(x), abs(y)
+
+#     while b != 0:
+#         a, b = b, a % b
+
+#     gcd = a
+
+#     lcm = abs(x * y) // gcd
+
+#     print("GCD:", gcd)
+#     print("LCM:", lcm)
 
 
 
-if x <= 1:
-    print("Not Prime")
-else:
-    for i in range(2, x):                   # here we check 2 to n range bcs  btw that range is only possiblity to get whole no. and n + values give decimal.
-        if x % i == 0:
-            print("Not Prime")
-            break
-    else:
-        print("Prime")
+
+
+#  Fibonacci series
+# Each term is the sum of the two before it, starting 0, 1, 1, 2, 3, 5, 8, 13.    
+
+# len is n  &   itrations also n times.
+
+# n = int(input("How many terms? "))
+# a, b = 0, 1
+# for _ in range(n):
+#     print(a, end=" ")
+#     a, b = b, a + b
+# print()
 
 
 
+#Count positive, negative and zero values
 
+# ls = [11,15,-15,21,18,5,-21,0]
 
+# pos = neg = zero = 0
 
+# for x in ls:
+#     if x > 0:
+#         pos += 1
+#     elif x < 0:
+#         neg += 1
+#     else:
+#         zero += 1
 
-
-
-
-
-
-
-
-
-
+# print(pos,neg,zero)
