@@ -420,6 +420,7 @@
 # print()
 
 
+#------------------------------------------------------------------------
 
 #Count positive, negative and zero values
 
@@ -436,3 +437,46 @@
 #         zero += 1
 
 # print(pos,neg,zero)
+
+# -- or -- 
+
+# def factorial(n):
+#     result = 1
+#     for i in range(1, n + 1):
+#         result *= i
+#     return result
+
+# print(factorial(5))               # 120
+
+
+
+#------------------------------------------------------------------------
+
+# -------  function calling by __name__
+
+#--file name - calc.py -- main file
+# def add(a, b):
+#     return a + b
+
+# def main():
+#     print("My Calculator")
+#     print(add(10, 20))
+
+# print("xyxx")
+
+# we use if when -
+# mean when i want to run function directly on main file, but it should not run directly on imported file.
+
+# if __name__ == "__main__":                  # __name__  ye by deafult hai python mai, when file run name alredy stores main then we check (name == main) as we name stores main when we ri=un so main = main condn true. 
+#     main()
+
+
+# -- test.py -- 
+# import calc
+# print(calc.add(5, 3))
+# print(calc.main())
+
+
+
+
+

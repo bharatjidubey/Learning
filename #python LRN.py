@@ -1058,7 +1058,28 @@
 # n = int(input("give n : "))
 # print(fact(n))
 
+# assert factorial(0) == 1
+# assert factorial(5) == 120
+# print("tests passed")
 
+
+
+# A docstring is a string written immediately after a function, class, or module definition to describe its purpose.
+# help() displays documentation about an object.
+# For a function, it typically shows the function signature and its docstring.
+
+
+# def sub(a, b):
+#     """xxxxyyyyzzz."""                    #doc string text
+#     return a - b
+
+# print(sub.__doc__)              # doc string
+# help(sub)                       #help
+
+
+
+# Testing a function
+# Check a function against inputs whose answers you know. assert raises an AssertionError if a claim is false and does nothing if it is true.
 
 
 
@@ -1319,3 +1340,11 @@ while num > 0:
     num = num // 10
 
 print(rev)
+
+
+
+
+
+
+
+
