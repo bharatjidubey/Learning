@@ -477,6 +477,27 @@
 # print(calc.main())
 
 
+#------------------------------------------------------------------------
+
+# # Arguments by postional, keyword, default , arg & keword argument
+
+# def add(a, b=2, *args):
+#     return a + b + sum(args)
+
+# print(add(1))               # 3     a=1, b=2
+# print(add(1, 2, 3, 4))      # 10    a=1, b=2, args=(3, 4)
+
+# def show(a, b=2, *args, **kwargs):              #args give tuple & kwargs give dictionary
+#     return a, b, args, kwargs
+
+# print(show(1, 3, 4, 5, x=9))   # (1, 3, (4, 5), {'x': 9})
+
+
+
+
+
+
+
 
 
 
